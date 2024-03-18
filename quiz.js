@@ -15,12 +15,18 @@ const CronJob = require("cron").CronJob;
   console.log(JSON.stringify(auth));
 
   // Upload multiple local images
-   const imagePaths = [
-     "C:/Users/mkuma/Downloads/One/img30.jpeg",
-     "C:/Users/mkuma/Downloads/One/img400.jpeg",
-     "C:/Users/mkuma/Downloads/One/img46.jpeg",
-     "C:/Users/mkuma/Downloads/One/img270.jpeg",
-   ];
+  const imagePaths = [
+    "C:/Users/mkuma/Downloads/G/img1.jpeg",
+    "C:/Users/mkuma/Downloads/G/img2.jpeg",
+    "C:/Users/mkuma/Downloads/G/img3.jpeg",
+    "C:/Users/mkuma/Downloads/G/img4.jpeg",
+    "C:/Users/mkuma/Downloads/G/img5.jpeg",
+    "C:/Users/mkuma/Downloads/G/img6.jpeg",
+    "C:/Users/mkuma/Downloads/G/img7.jpeg",
+    "C:/Users/mkuma/Downloads/G/img8.jpeg",
+    "C:/Users/mkuma/Downloads/G/img9.jpeg",
+    "C:/Users/mkuma/Downloads/G/img10.jpeg",
+  ];
 
   const imageBuffers = await Promise.all(
     imagePaths.map((path) => fs.promises.readFile(path))
@@ -33,13 +39,35 @@ const CronJob = require("cron").CronJob;
 
   const publishResult = await ig.publish.album({
     items: albumItems, // Array of objects, each representing an image in the album
-    caption: ` Top OWS 📕📕  words asked IN #ssc #exam
-
-#ssc #ssccgl
-
-#sscexam #sscenglish #englishexam #englishiseasy #sscchslexam #englishlanguageteaching #englishlearner #examday #englishtown #englishmastiffpuppy #englishquiz #sscycle #englishgrammer #englisheveryday #sscgk #englishacademy #englishman #englishtoyterrier #ssccglcpocds #examsover #sscexams #englishword #cglove
+    caption: ` Follow this page for more information regarding SSC
 .
-.
+#currentaffairs
+#onlinetaiyari
+#uppsc
+#ssc
+#ssccgl
+#sscchsl
+#cpo #delhi
+#indianarmy
+#dailyupdate
+#mts
+#hindinews
+#reasoning
+#ncc
+#sports
+#reasoningquiz
+#ukpsc
+#sscexam
+#panjab
+#drsjaishankar
+#UPSC
+#womenempowerment
+#narendramodi
+#deepikapadukonefans #sscgkcurrentaffairscracker
+#indianpolitics
+#indianarmy🇮🇳
+#yogiadityanath
+#indiangovt
 `, // Caption for the album (optional)
   });
 
